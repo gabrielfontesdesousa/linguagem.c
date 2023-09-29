@@ -6,79 +6,63 @@
 
 int main(int argc, char *argv[]) {
 	setlocale(LC_ALL, "Portuguese");
-	int numero1;
-	int numero2;
-	int resultado;
-	int operacao;
-	int repeticao;
-	
-	printf("escreva o primeiro numero:\n");
-	scanf("%d", &numero1);
-	printf("escreva o segundo numero: \n");
-	scanf("%d", &numero2);
-	printf("digite 1 para somas, 2 para subtracoes, 3 para multiplicacoes, 4 para divisoes: \n");
-	scanf("%d", &operacao);
-	
-	switch (operacao){
-		case 1:
-		    operacao=="1";
-			resultado = numero1 + numero2;
-		
-			printf("O resultado é %d", resultado);
-		break;
-	
-				case 2:
-		    operacao=="2";
-			resultado = numero1 - numero2;
-		
-			printf("O resultado é %d", resultado);
-		break;
-		
-				case 3:
-		    operacao=="3";
-			resultado = numero1 * numero2;
-		
-			printf("O resultado é %d", resultado);
-		break;
-		
-		case 4:
-		    operacao=="4";
-			resultado = numero1 / numero2;
-		
-			printf("O resultado é %d", resultado);
-		break;		
-		
-		
-		 
-	}
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	return 0;
+  char operacao;
+    float num1, num2, resultado;
+    int continuar = 1;
+
+    while (continuar) {
+        printf("\nSelecione uma operacao:\n");
+        printf("1 - Soma \n");
+        printf("2 - Subtracao\n");
+        printf("3 - Multiplicacao\n");
+        printf("4 - Divisao\n");
+        printf("0 - Sair\n");
+        scanf(" %c", &operacao);
+
+        switch (operacao) {
+            case '1':
+                printf("Digite o primeiro numero: ");
+                scanf("%f", &num1);
+                printf("Digite o segundo numero: ");
+                scanf("%f", &num2);
+                resultado = num1 + num2;
+                printf("Resultado: %f \n", resultado);
+                break;
+            case '2':
+                printf("Digite o primeiro numero: ");
+                scanf("%f", &num1);
+                printf("Digite o segundo numero: ");
+                scanf("%f", &num2);
+                resultado = num1 - num2;
+                printf("Resultado: %f \n", resultado);
+                break;
+            case '3':
+                printf("Digite o primeiro numero: ");
+                scanf("%f", &num1);
+                printf("Digite o segundo numero: ");
+                scanf("%f", &num2);
+                resultado = num1 * num2;
+                printf("Resultado: %f \n", resultado);
+                break;
+            case '4':
+                printf("Digite o primeiro numero: ");
+                scanf("%f", &num1);
+                printf("Digite o segundo numero: ");
+                scanf("%f", &num2);
+                if (num2 != 0) {
+                    resultado = num1 / num2;
+                    printf("Resultado: %f \n", resultado);
+                } else {
+                    printf("Erro: Divisao por zero!\n");
+                }
+                break;
+            case '0':
+                continuar = 0;
+                printf("Encerrando o programa.\n");
+                break;
+
+        }
+    }
+    return 0;
 }

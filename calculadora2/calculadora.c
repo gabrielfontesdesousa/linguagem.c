@@ -19,35 +19,38 @@ int main(int argc, char *argv[]) {
 	printf("digite 1 para somas, 2 para subtracoes, 3 para multiplicacoes, 4 para divisoes: \n");
 	scanf("%d", &operacao);
 	
-	switch (operacao){
-		case 1:
+	
+	while (repeticao==0){
+	      switch (operacao){
+       case 1:
 		    operacao=="1";
 			resultado = numero1 + numero2;
 		
-			printf("O resultado é %d", resultado);
+		
 		break;
 	
 				case 2:
 		    operacao=="2";
 			resultado = numero1 - numero2;
 		
-			printf("O resultado é %d", resultado);
+			
 		break;
 		
 				case 3:
 		    operacao=="3";
 			resultado = numero1 * numero2;
 		
-			printf("O resultado é %d", resultado);
 		break;
 		
 		case 4:
 		    operacao=="4";
 			resultado = numero1 / numero2;
-		
-			printf("O resultado é %d", resultado);
 		break;		
 		
-		
-		 
-	}
+		case repeticao: 
+             printf("vc deseja continuar? se sim, digite 1.");
+             scanf("%d", &repeticao);
+  }
+		printf("O resultado é %d", resultado);
+        return: 0;
+}
